@@ -111,7 +111,7 @@ class InterceptRequestHandler:
             flow.response.status_code = response.status_code
             flow.response.reason = response.reason
             flow.response.headers = self._to_headers_obj(response.headers)
-            flow.response.raw_content = response.body
+            # flow.response.raw_content = response.body
 
         log.info('Capturing response: %s %s %s', flow.request.url, response.status_code, response.reason)
 
